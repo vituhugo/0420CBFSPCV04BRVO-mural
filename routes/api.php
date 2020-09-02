@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// /api/post
+Route::post('post', 'MuralController@criarPost');
+Route::put('post/{id}', 'MuralController@editarPost');
+Route::delete('post/{post}', 'MuralController@deletar');
+Route::get('post', 'MuralController@listar');
