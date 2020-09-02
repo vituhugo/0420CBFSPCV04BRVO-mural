@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+/**
+ * Route::metodo('nome_da_rota', 'nome_controlador@nome_metodo');
+ */
+Route::get('/mural', 'MuralController@mural');
